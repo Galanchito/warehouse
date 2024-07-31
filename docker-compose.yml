@@ -1,0 +1,16 @@
+version: '3.1'
+services: 
+  postgresql_warehouse:
+    image: crunchydata/crunchy-postgres-gis:centos8-13.3-3.1-4.6.3
+    ports: 
+      - 5433:5433
+    environment: 
+      MODE: postgres
+      PG_DATABASE: warehousedb
+      PG_PRIMARY_PORT: 5433
+      PG_MODE: primary
+      PG_USER: user
+      PG_PASSWORD: warehouse
+      PG_PRIMARY_USER: user
+      PG_PRIMARY_PASSWORD: warehouse
+      PG_ROOT_PASSWORD: rootpass
